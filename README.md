@@ -11,28 +11,28 @@ Code is written in Python3.7
 
 In this server, I have used Cloudflare dns-over-tls (1.1.1.1)(public dns sever) for quering the client requests.
 
-It will create a socket connection and bind it with the Docker's network (172.168.1.2) on port 53
-Receive UDP DNS requests on this connection and create a thread for the request and run requesthandler
-RequestHandler will call the function to create TLS connection cloudflare dns server on port 853 using self-signed certificate and after that convert UDP request into TCP DNS query and send it to Cloudflare DNS server over the tcp connection, when the server got TCP answer from Cloudflare DNS server, it will convert it into UDP and respond to the client over the same Docker network socket connection
-Currently, It is handling nslookup and dig requests
+•	It will create a socket connection and bind it with the Docker's network (172.168.1.2) on port 53
+•	Receive UDP DNS requests on this connection and create a thread for the request and run requesthandler
+•	RequestHandler will call the function to create TLS connection cloudflare dns server on port 853 using self-signed certificate and after that convert UDP request into TCP DNS query and send it to Cloudflare DNS server over the tcp connection, when the server got TCP answer from Cloudflare DNS server, it will convert it into UDP and respond to the client over the same Docker network socket connection
+•	Currently, It is handling nslookup and dig requests
 
 **Installing**
 ================================================
 **To run this project:**
 
-Create docker image by using Dockerfile which is in the root directory by run this command:
-docker build -t dns-over-tls .
-Create docker network by using this command:
-docker network create --subnet 172.168.1.0/24 testNetwork
-Run the container by using that docker image we created in the previous step by run this command:
-docker run --net testNetwork -it dns-over-tls
-Update your /etc/resolv.conf file for the nslookup by adding the nameserver entry:
-nameserver 172.168.1.2 #container local ip
-You can test this by making nslookup or dig request
-nslookup yahoo.com
-nslookup -type=aaaa www.google.com
-dig @172.168.1.2 -p 53 google.com
-On successful response server will give 200 response code
+•	Create docker image by using Dockerfile which is in the root directory by run this command:
+    o	docker build -t dns-over-tls .
+•	Create docker network by using this command:
+    o	docker network create --subnet 172.168.1.0/24 testNetwork
+•	Run the container by using that docker image we created in the previous step by run this command:
+    o	docker run --net testNetwork -it dns-over-tls
+•	Update your /etc/resolv.conf file for the nslookup by adding the nameserver entry:
+    o	nameserver 172.168.1.2 #container local ip
+•	You can test this by making nslookup or dig request
+    o	nslookup yahoo.com
+    o	dig @172.168.1.2 -p 53 google.com
+•	On successful response server will give 200 response code.
+
 
 **Security concerns**
 ==================================
