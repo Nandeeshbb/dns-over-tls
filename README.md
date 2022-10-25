@@ -5,11 +5,11 @@ DNS-Over-TLS server is used to send DNS queries over an encrypted connection, by
 
 **Getting Started**
 ====================================
-Source code: dns-over-tls.py
+**Source code: dns-over-tls.py**
 
 Code is written in Python3.7
 
-In this server, I have used Cloudflare dns-over-tls (1.1.1.1) for quering the client requests.
+In this server, I have used Cloudflare dns-over-tls (1.1.1.1)(public dns sever) for quering the client requests.
 
 It will create a socket connection and bind it with the Docker's network (172.168.1.2) on port 53
 Receive UDP DNS requests on this connection and create a thread for the request and run requesthandler
@@ -18,7 +18,7 @@ Currently, It is handling nslookup and dig requests
 
 **Installing**
 ================================================
-To run this project:
+**To run this project:**
 
 Create docker image by using Dockerfile which is in the root directory by run this command:
 docker build -t dns-over-tls .
