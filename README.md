@@ -1,7 +1,9 @@
 # dns-over-tls
 **Dns-over-tls on kubernetes**
 ====================================
-DNS-Over-TLS server is used to send DNS queries over an encrypted connection, by default, DNS query is sent over the plain text connection. This project is to design and develop a DNS proxy. A DNS proxy is a DNS forwarder that acts as a DNS resolver for client programs but requires an upstream DNS server, Cloudflare DNS server is used in this project as upstream DNS server, to perform the DNS lookup. It receives queries from the clients and forward it to the cloudflare DNS server for the results.
+DNS-Over-TLS server is used to send DNS queries over an encrypted connection(dns over tls), by default, DNS query is sent over the plain text connection. This is to design and develop a DNS proxy. A DNS proxy is a DNS forwarder that acts as a DNS resolver for client programs but requires an upstream DNS server, Cloudflare DNS server is used in this project as upstream DNS server, to perform the DNS lookup. It receives queries from the clients and forward it to the cloudflare DNS server for the results.
+
+And also I have demonstrated , how to integrate the same on kubernetes cluster with coredns as dns resolver.
 
 **Getting Started**
 ====================================
