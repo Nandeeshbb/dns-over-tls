@@ -85,6 +85,7 @@ forward . tls://1.1.1.1 tls://1.0.0.1 {
     cache
     reload
 }
+ 
  Once we add into dns server on corefile , which will atomatically add cloudflare dns server on pod level or container level , which is on /etc/resolv.conf file.
  without donw time we can integrate cloudflare dns server on kubernetes cluster.
 
