@@ -51,8 +51,8 @@ In this server, I have used Cloudflare dns-over-tls (1.1.1.1)(public dns sever) 
 
 **Security concerns**
 ======================================================
-Imagine this proxy being deployed in an infrastructure. What would be the security
-concerns you would raise?.
+**Imagine this proxy being deployed in an infrastructure. What would be the security
+concerns you would raise?.**
 
 As cloudflare is public dns sever and there could be fishing activities will be there on over pulic server.
 
@@ -65,8 +65,8 @@ And some could get access to the buffer also to get the stored/cached informatio
 
 **Microservices Architecture or Distributed Environment**
 ===============================================================
-How would you integrate that solution in a distributed, microservices-oriented and
-containerized architecture?
+**How would you integrate that solution in a distributed, microservices-oriented and
+containerized architecture?**
 
 In dirtibuted environment and micro service oriented architecture , while integrating and service, should not be an impact to any of the services and I have used coredns here to ingetrate cloudflare server on kubernetes cluster.
 
@@ -97,7 +97,7 @@ forward . tls://1.1.1.1 tls://1.0.0.1 {
 
 **Improvements**
 =============================================
-There are alot more things that we can add in this project:
+**There are alot more things that we can add in this project:**
 
 Caching feature (store new results into the buffer for the better performance)
 
