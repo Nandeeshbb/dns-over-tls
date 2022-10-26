@@ -68,7 +68,7 @@ And some could get access to the buffer also to get the stored/cached informatio
 How would you integrate that solution in a distributed, microservices-oriented and
 containerized architecture?
 
-In dirtibuted environment and micro service oriented architecture , while integrating and service, should not be impact to any of the services and I have used coredns here to ingetrate cloudflare server on kubernetes cluster.
+In dirtibuted environment and micro service oriented architecture , while integrating and service, should not be an impact to any of the services and I have used coredns here to ingetrate cloudflare server on kubernetes cluster.
 
 In coredns/kubedns which will running multiple pods to resolove the dns querries.
 
