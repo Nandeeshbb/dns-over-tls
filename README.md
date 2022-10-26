@@ -77,7 +77,6 @@ The main file for coredns is Corefile , which will be having all configuration d
 ###
 # /etc/coredns/Corefile
 
-
 forward . tls://1.1.1.1 tls://1.0.0.1 {
 
     tls_servername cloudflare-dns.com
