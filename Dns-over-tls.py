@@ -38,7 +38,7 @@ def requesthandle(data,address,DNS):
      else:
 	udp_result = tcp_result[2:]
         s.sendto(udp_result,address)
-        print ("Success with 200 reponce")   
+        print ("Success with 200 responce")   
   else:
      print ("not a valid dns query")
 
